@@ -1,5 +1,6 @@
 # Proyecto del Juego 2048
-
+# VIDEO
+[![Video del Proyecto](https://img.youtube.com/vi/2jLjgfIf_14/maxresdefault.jpg)](https://www.youtube.com/watch?v=2jLjgfIf_14)
 ## Descripción
 Este proyecto es una implementación en Java del popular juego 2048. Incluye una interfaz gráfica de usuario (GUI) para interactuar con el juego.
 
