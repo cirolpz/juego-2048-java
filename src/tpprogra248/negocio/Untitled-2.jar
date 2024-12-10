@@ -1,0 +1,17 @@
+leer_palabras Leer palabras del archivo .txt y guardarlas en una lista.
+sortear_palabra Elige una palabra al azar de la lista de palabras en
+memoria.
+calcular_letras Cuenta la cantidad de letras que tiene la palabra.
+leer_palabra Lee la palabra ingresada por el usuario
+Verificar_letras_verdes Verifica las letras que son correctas.
+Verificar_letras_amarillas Verifica las letras que aparecen en la palabra pero estan
+en posición incorrecta.
+Informar_resultado Informa por pantalla el resultado de la palabra ingresada,
+mostrando las letras con el color que le corresponde.
+Calcular_puntos Calcula la cantidad de puntos obtenidos.
+Verificar_intentos Verifica la cantidad de intentos restantes.
+Pedir_nombre Solicita el nombre al usuario para luego guardarlo en el
+ranking.
+Grabar_ranking Graba en el archivo .txt el nombre del usuario con los
+puntos obtenidos
+Mostrar_ranking Muestra el ranking de los ultimos 3 jugadores.

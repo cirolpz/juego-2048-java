@@ -1,0 +1,149 @@
+leer_palabras Leer palabras del archivo .txt y guardarlas en una lista.
+
+listaPalabras= archivo
+nuevaPalabra= 0//linea donde empieza la palabra
+palabra= ""
+contarLetras= 0
+intentosRestantes = 6
+puntos = 0
+nombreJugador = ""
+resultadoPalabra="
+ranking = archivo
+bandera=false;
+
+
+
+
+nombreArchivo="palabras.txt"
+archivo=detectarArchivo(nombreArchivo)
+leerPalabras(archivo)
+{
+    caracter=sortear_palabra();
+    contarLetra();
+    while(caracter != '\n'){//recorrer hasta el salto de linea
+        palabra+=caracter;
+        caracter+=1//muevo el puntero 1 bit para acceder al siguiente caracter
+    }
+    {
+        numeroDeUltPalabra=marcarLineaDePalabraParaQueNoSalgaEnElSorteo();
+        palabraEnJuego=palabra;
+        palabra="";
+    }
+}
+
+sortear_palabra Elige una palabra al azar de la lista de palabras en memoria.
+
+sortear_palabra{//devuelve el numero que indica una linea aleatoria del archivo y desde ahi empezrá la palabra.
+    if(nuevaPalabra>=0 %% nuevaPalabra<numeroUltimaPalabra && nuevaPalabra>numeroUltimaPalabra && nuevaPalabra<=cantidadDeLineas)
+       nuevaPalabra= nuevaPalabra.random();
+       retornar nuevaPalabra;
+}
+
+calcular_letras Cuenta la cantidad de letras que tiene la palabra.
+contarLetra(){
+ contarLetras++;
+}
+
+
+leer_palabra Lee la palabra ingresada por el usuario
+comunicarseConLaConsola()
+leer_palabra() {
+    palabraUsuario = ""
+    mientras (caracter != '\n') {
+        caracter = leer_caracter()
+        palabraUsuario += caracter
+    }
+    retornar palabraUsuario
+}
+
+
+Verificar_letras Verifica las letras.
+verificar_letras(palabraUsuario, palabraEnJuego) {
+    while j=0 < longitud(palabraEnJuego){
+        while i = 0 < longitud(palabraEnJuego) {
+            if (palabraUsuario[j] == palabraEnJuego[j]) {
+                resultadoPalabra+=marcar_letra_verde(i)
+                i++;
+                bandera=true;
+                breack;
+            }
+
+            if( palabraUsuario[j] == palabraEnJuego[i]){
+                 resultadoPalabra+=marcar_letra_amarilla(j)
+                 bandera=true;
+            }
+            if( palabraUsuario[j] == palabraEnJuego[i]){
+                 resultadoPalabra+=marcar_letra_rojo(j)
+                 bandera=true;
+            }
+        }
+        if(bandera){
+             resultadoPalabra+=palabraUsuario[j]
+        }
+                bandera=false;
+
+        j++;
+    }
+}
+
+
+Informar_resultado Informa por pantalla el resultado de la palabra ingresada, mostrando las letras con el color que le corresponde.
+informar_resultado() {
+    conectarseConConsola().mostrar(resultadoPalabra)    
+}
+
+
+Calcular_puntos Calcula la cantidad de puntos obtenidos..---------------------------------------------------------------------------------------------------------------------
+
+cantLetrasDeLasPalabras*cantIntentosRestantes
+
+
+
+
+Verificar_intentos Verifica la cantidad de intentos restantes..
+Verificar_intentos( intentos>0)
+
+restar_intento(){
+    if(Verificar_intentos){
+        intentos--;
+    }
+    conectarseConConsola.mostrar("FIN DE INTENTOS")
+}
+
+
+
+Pedir_nombre Solicita el nombre al usuario para luego guardarlo en el ranking. 
+
+
+pedir_nombre() {
+    conectarseConConsola.mostrar("Ingresa tu nombre:")
+    conectarseConConsola.leer_entrada(nombreJugador)
+}
+
+
+
+
+Grabar_ranking Graba en el archivo .txt el nombre del usuario con los puntos obtenidos
+
+
+grabar_ranking(nombreJugador, puntos) {
+    archivoRanking = abrir_archivo("ranking.txt")
+    escribir_linea(archivoRanking, nombreJugador + " " + puntos)
+    saltoDeLinea
+    cerrar_archivo(archivoRanking)
+}
+
+Mostrar_ranking Muestra el ranking de los ultimos 3 jugadores.
+
+
+mostrar_ranking() {
+    archivoRanking = abrir_archivo("ranking.txt", "r")
+    listaRanking = leer_ultimas_lineas(archivoRanking, 3)
+    mostrar(listaRanking)
+}
+
+
+
+.data
+
+.
